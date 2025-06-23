@@ -19,7 +19,29 @@ function insertionSort(arr: number[]) {
       lookbackIndex -= 1;
     }
   }
-  return arr;
+  console.log("Insertion sort yields:", arr);
 }
 
-console.log(insertionSort(array));
+//insertionSort(array);
+
+function selectionSort(arr: number[]) {
+  for (let currentIndex = 0; currentIndex < arr.length; currentIndex++) {
+    let currentMinimum = arr[currentIndex];
+    let minimumIndex = currentIndex;
+    for (
+      let lookForwardIndex = currentIndex + 1;
+      lookForwardIndex < arr.length;
+      lookForwardIndex++
+    ) {
+      if (currentMinimum > arr[lookForwardIndex]) {
+        currentMinimum = arr[lookForwardIndex];
+        minimumIndex = lookForwardIndex;
+      }
+    }
+    arr[minimumIndex] = arr[currentIndex];
+    arr[currentIndex] = currentMinimum;
+  }
+  console.log("Selection sort yields:", arr);
+}
+
+// selectionSort(array);
