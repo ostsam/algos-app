@@ -44,4 +44,4 @@ function selectionSort(arr: number[]) {
   console.log("Selection sort yields:", arr);
 }
 
-selectionSort(array);
+// selectionSort(array);
